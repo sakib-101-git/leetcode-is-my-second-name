@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Java Build and Run",
+            "type": "shell",
+            "command": "javac -d \"${fileDirname}\" \"${file}\" && java -cp \"${fileDirname}\" \"${fileBasenameNoExtension}\" < \"${fileDirname}\\input.txt\" > \"${fileDirname}\\output.txt\"",
+            "options": {
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": [
+                        "/c"
+                    ]
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$javac"
+            ]
+        }
+    ]
+}
